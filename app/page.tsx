@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FaShareAlt, FaUsers, FaStar } from "react-icons/fa"; // icônes
 import Link from 'next/link';
-import "./HomePage.css";
+import "./globals.css";
 
 export default function HomePage() {
   const [name, setName] = useState("");

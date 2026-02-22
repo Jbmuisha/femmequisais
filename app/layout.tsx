@@ -1,5 +1,5 @@
 // app/layout.tsx
-import './HomePage.css';
+import './globals.css';
 import Link from 'next/link';
 import { FaGlobe, FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
 

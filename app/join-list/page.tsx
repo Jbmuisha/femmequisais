@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import "../HomePage.css"; // réutiliser ton CSS existant
+import "../globals.css";
 
 export default function JoinListPage() {
   const [name, setName] = useState("");
