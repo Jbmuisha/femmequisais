@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from '../hooks/useTranslation';
 import "../globals.css";
 
 export default function JoinListPage() {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -13,7 +15,7 @@ export default function JoinListPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("Envoi en cours...");
+    setStatus(t('join.sending'));
 
     try {
       const res = await fetch("/api/register", {
@@ -23,27 +25,27 @@ export default function JoinListPage() {
       });
 
       if (res.ok) {
-        setStatus("Inscription réussie ! Merci 🙏");
+        setStatus(t('join.success'));
         setName(""); setEmail(""); setPhone(""); setCity(""); setMotivation("");
       } else {
-        setStatus("Erreur, réessaie plus tard");
+        setStatus(t('join.error'));
       }
     } catch {
-      setStatus("Erreur réseau, réessaie plus tard");
+      setStatus(t('join.networkError'));
     }
   };
 
   return (
     <div className="container">
-      <h1 className="text-3xl font-bold text-center my-10">Inscription au club</h1>
+      <h1 className="text-3xl font-bold text-center my-10">{t('join.title')}</h1>
       <section className="form-section">
         <form onSubmit={handleSubmit}>
-          <input placeholder="Nom complet" value={name} onChange={e => setName(e.target.value)} required />
-          <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required />
-          <input placeholder="Téléphone / WhatsApp" value={phone} onChange={e => setPhone(e.target.value)} />
-          <input placeholder="Ville" value={city} onChange={e => setCity(e.target.value)} />
-          <textarea placeholder="Pourquoi veux-tu rejoindre ?" value={motivation} onChange={e => setMotivation(e.target.value)} />
-          <button type="submit" className="btn-primary">S’inscrire</button>
+          <input placeholder={t('join.name')} value={name} onChange={e => setName(e.target.value)} required />
+          <input type="email" placeholder={t('join.email')} value={email} onChange={e => setEmail(e.target.value)} required />
+          <input placeholder={t('join.phone')} value={phone} onChange={e => setPhone(e.target.value)} />
+          <input placeholder={t('join.city')} value={city} onChange={e => setCity(e.target.value)} />
+          <textarea placeholder={t('join.motivation')} value={motivation} onChange={e => setMotivation(e.target.value)} />
+          <button type="submit" className="btn-primary">{t('join.submit')}</button>
         </form>
         {status && <p className="status">{status}</p>}
       </section>
