@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="twitter:image" content="/images/femmequisait.png" />
         
         {/* Favicon */}
-        <link rel="icon" href="/images/femmequisait.png" />
+        <link rel="icon" href="/images/lafemmequisait.png" />
         <link rel="apple-touch-icon" href="/images/femmequisait.png" />
         
         {/* Canonical URL */}
@@ -56,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <header className="header">
           <div className="logo">
-            <img src="/images/femmequisait.png" alt="Logo" />
+            <img src="/images/lafemmequisait.png" alt="Logo" />
             <span>{t('header.title')}</span>
           </div>
 

@@ -607,10 +607,11 @@
   .logo {
     font-size: 1.1rem;
   }
-  .logo img {
-    width: 70px;
-    height: 70px;
-  }
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
   .join-btn {
     padding: 0.4rem 1.25rem;
     font-size: 0.9rem;
@@ -628,10 +629,11 @@
   .logo {
     font-size: 1rem;
   }
-  .logo img {
-    width: 50px;
-    height: 50px;
-  }
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
   .join-btn {
     padding: 0.4rem 1rem;
     font-size: 0.85rem;
