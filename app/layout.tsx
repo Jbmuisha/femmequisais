@@ -82,31 +82,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </h3>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 <li>
-                  <Link href="#" style={{ color: '#593122', textDecoration: 'none' }}>
+                  <Link href="/terms" style={{ color: '#593122', textDecoration: 'none' }}>
                     {t('footer.terms')}
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" style={{ color: '#593122', textDecoration: 'none' }}>
+                  <Link href="/privacy" style={{ color: '#593122', textDecoration: 'none' }}>
                     {t('footer.privacy')}
                   </Link>
                 </li>
-                <li>
-                  <Link href="#" style={{ color: '#593122', textDecoration: 'none' }}>
-                    {t('footer.cookies')}
-                  </Link>
-                </li>
+               
               </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h3 style={{ fontSize: '0.9rem', fontWeight: '600', marginBottom: '1rem', color: '#555', textTransform: 'uppercase' }}>Contact</h3>
+              <p style={{ color: '#593122', marginBottom: '0.5rem' }}>
+                <a href="mailto:lafemmequisait@gmail.com" style={{ color: '#593122', textDecoration: 'none' }}>
+                  lafemmequisait@gmail.com
+                </a>
+              </p>
             </div>
 
             {/* Réseaux sociaux */}
             <div>
               <h3 style={{ fontSize: '0.9rem', fontWeight: '600', marginBottom: '1rem', color: '#555', textTransform: 'uppercase' }}>{t('footer.social')}</h3>
               <div style={{ display: 'flex', gap: '1rem' }}>
-                <a href="https://www.facebook.com/tonpage" target="_blank" rel="noopener noreferrer"><FaFacebookF size={28} color="#1877F2" /></a>
-                <a href="https://www.instagram.com/tonprofil" target="_blank" rel="noopener noreferrer"><FaInstagram size={28} color="#C13584" /></a>
-                <a href="https://www.youtube.com/tonchaine" target="_blank" rel="noopener noreferrer"><FaYoutube size={28} color="#FF0000" /></a>
-                <a href="https://twitter.com/tonprofil" target="_blank" rel="noopener noreferrer"><FaTwitter size={28} color="#1DA1F2" /></a>
+                <a href="https://instagram.com/la_femme_qui_sait" target="_blank" rel="noopener noreferrer"><FaInstagram size={28} color="#C13584" /></a>
               </div>
             </div>
           </div>
